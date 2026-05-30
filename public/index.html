@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 英语口语陪练</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    button {
+      padding: 12px 18px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #startBtn {
+      background: #111;
+      color: white;
+    }
+
+    #stopBtn {
+      background: #e5e5e5;
+    }
+
+    .box {
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fafafa;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI 英语口语陪练</h1>
+  <p>点击开始录音，说一句英文或中文，然后点击停止并发送。</p>
+
+  <button id="startBtn">开始录音</button>
+  <button id="stopBtn" disabled>停止并发送</button>
+
+  <div class="box">
+    <strong>你说：</strong>
+    <div id="userText">还没有内容</div>
+  </div>
+
+  <div class="box">
+    <strong>AI 老师：</strong>
+    <div id="aiReply">等待你的发言</div>
+  </div>
+
+  <audio id="audioPlayer" controls style="margin-top: 20px; width: 100%;"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
